@@ -9,12 +9,12 @@ I worked with and received help from Yu Zhu.
 I received help from our TA (Xiaowei Hu) during the office hour on Wednesday.
 I used some funcitons that our professor(Csaba Szepesvari)developed in class, as well as functions on eClass.
 
-# Accessories:
+# Accessories
 * 2 Arduino Mega 2560 Boards
 * USB 2.0 A-B cable
 * Wires
 
-# Wiring instructions:
+# Wiring instructions
 * Arduino1 GND <--> Arduino2 GND
 * Arduino1 Communication TX3 Pin 14 <--> Arduino2 Communication RX3 Pin 15
 * Arduino1 Communication RX3 Pin 15 <--> Arduino2 Communication TX3 Pin 14 
@@ -31,7 +31,4 @@ To generate a 31 bits long key, the pow_mod function has to be improved through 
 
 The handshaking process is the most significant componemt of the assignment.  The Arduino configured to act as a client keeps sending connection requests to the server. When the server captures one of these requests, it acknowledges the receipt of the message so that the client knows that its partner is there and that it can move on to the data exchange phase. However, before moving to this phase, the client sends an acknowledgement of the acknowledgement.While waiting for the acknowledgement of the acknowledgement from the client, the server consumes all the outstanding connection requests so that when the acknowledgement arrives, it can move on to the data exchange phase. The whole process is based on the flow charts on the assignment description page on eclass. I used the functions provided on eclass.
 
-We uses what is known as a stream cipher (see also here):using our one shared key to generate a whole sequence of keys to use for encryption, which are uniquely determined by the first element of the sequence. The function on eclass implements the Park-Miller algorithm with 32 bit integer arithmetic.  
-
- 
-
+We uses what is known as a stream cipher (see also here):using our one shared key to generate a whole sequence of keys to use for encryption, which are uniquely determined by the first element of the sequence. The function on eclass implements the Park-Miller algorithm with 32 bit integer arithmetic.
